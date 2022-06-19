@@ -53,6 +53,100 @@ function filterData(searchTerm) {
 
 // /Pegando cada banda do api e distrbuindo numa lista para realizar a busca. tela 1.
 
+// Tentando criar o layout da pagina 2. Alinhando as imagens:
+
+// function imgBefore() {
+//   let p = document.createElement("p");
+//   const complicada = document.getElementById("complicada");
+//   complicada.after(p);
+
+//   p.classList.add("margin-esquerda");
+
+//   p.innerHTML = ` 465`;
+// }
+
+// function imgAfter() {
+//   let p = document.createElement("p");
+//   const complicada = document.getElementById("complicada");
+//   complicada.after(p);
+
+//   p.classList.add("margin-direita");
+
+//   p.innerHTML = ` ola pessoal 123`;
+// }
+
+// imgBefore();
+// imgAfter();
+
+// Não deu certo inserir o layout pelo javascript.
+
+// Fetching the Biography
+
+const cardBody = document.getElementById("card-body");
+const bandBio = [];
+const bioBtn = [];
+
+getBio();
+
+async function getBio() {
+  const res = await fetch(
+    "https://iws-brazil-labs-iws-recruiting-bands.iwsbrazil.io/api/bands"
+  );
+
+  const bio = await res.json();
+
+  console.log(bio);
+
+  // Clear band biography
+  cardBody.innerHTML = "";
+
+  bio.forEach((band) => {
+    const paragraph = document.createElement("p");
+    paragraph.classList.add("p-6");
+    paragraph.classList.add("text-justify");
+    paragraph.classList.add("overflow-hidden");
+    paragraph.classList.add("h-28");
+    paragraph.classList.add("text-gradient");
+    paragraph.classList.add("text-justify");
+    paragraph.setAttribute("id", "band-description");
+
+    bandBio.push(paragraph);
+
+    paragraph.innerHTML = `${band.biography}`;
+    cardBody.appendChild(paragraph);
+
+    const btn = document.createElement("button");
+    btn.classList.add("font-bold");
+    btn.classList.add("text-4xl");
+    btn.classList.add("text-center");
+    btn.classList.add("p-6");
+    btn.classList.add("ml-auto");
+    btn.classList.add("mr-auto");
+    btn.classList.add("block");
+    btn.setAttribute("id", "read-more");
+
+    bioBtn.push(btn);
+    btn.innerHTML = "+";
+    cardBody.appendChild(btn);
+  });
+}
+
+// cardBody.innerHTML = `
+
+// <p
+// class="p-6 text-justify overflow-hidden h-28 text-gradient"
+// id="band-description"
+// >
+// ${band.biography}
+// </p>
+// <button
+// class="font-bold text-4xl text-center p-6 ml-auto mr-auto block"
+// id="read-more"
+// >
+// +
+// </button>
+// `
+
 // READ MORE BUTTON (+) tela 2.
 
 const readMore = document.getElementById("read-more");
@@ -93,55 +187,3 @@ function removeGradient() {
 // }
 
 // /READ MORE BUTTON (+)
-
-// Fetching the Biography
-
-const cardBody = document.getElementById("card-body");
-const bandBio = [];
-
-getBio();
-
-async function getBio() {
-  const res = await fetch(
-    "https://iws-brazil-labs-iws-recruiting-bands.iwsbrazil.io/api/bands"
-  );
-
-  const bio = await res.json();
-
-  console.log(bio);
-
-  // Clear band biography
-  cardBody.innerHTML = "";
-
-  bio.forEach((band) => {
-    const paragraph = document.createElement("p");
-    paragraph.classList.add("p-6");
-    paragraph.classList.add("text-justify");
-    paragraph.classList.add("overflow-hidden");
-    paragraph.classList.add("h-28");
-    paragraph.classList.add("text-gradient");
-    paragraph.classList.add("text-justify");
-    paragraph.setAttribute("id", "band-description");
-
-    bandBio.push(paragraph);
-
-    paragraph.innerHTML = `${band.biography}`;
-    cardBody.appendChild(paragraph);
-  });
-}
-
-// cardBody.innerHTML = `
-
-// <p
-// class="p-6 text-justify overflow-hidden h-28 text-gradient"
-// id="band-description"
-// >
-// ${band.biography}
-// </p>
-// <button
-// class="font-bold text-4xl text-center p-6 ml-auto mr-auto block"
-// id="read-more"
-// >
-// +
-// </button>
-// `

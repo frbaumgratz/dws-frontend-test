@@ -11,7 +11,7 @@
     <link rel="stylesheet" href="css/style.css" />
     <link rel="stylesheet" href="css/style2.css" />
 
-    <title>Albums</title>
+    <title>Albuns</title>
   </head>
   <body>
     <!-- Searchbar -->
@@ -68,18 +68,105 @@
       </p>
     </div> -->
 
-    <!-- Card -->
-    <div class="card">
-      <!-- card header -->
-      <div class="card__header">
+    <!-- Card tentativa 1-->
+    <!-- <div class="card"> -->
+    <!-- card header -->
+    <!-- <div class="card__header" id="card-header">
         <img
           class="h-[300px] w-[375px] object-cover"
           src="/assets/imgs/rush_capa_1.jpeg"
           alt="rush"
         />
       </div>
-      <div class="card__inbetween">
-        <!-- aqui é a parte difícil -->
+      <div class="card__inbetween" id="card-between"> -->
+    <!-- aqui é a parte difícil -->
+    <!-- <div class="flex justify-center items-center"> -->
+    <!-- <p class="translate-y-1/3 font-semibold text-gray-500 text-sm">
+            ROCK
+          </p> -->
+    <!-- <img
+            class="fixed h-[90px] w-[90px] object-cover rounded-full"
+            src="/assets/imgs/rush_capa_1.jpeg"
+            alt="rush"
+            id="complicada"
+          /> -->
+    <!-- <p class="translate-y-1/3 font-semibold text-gray-500 text-sm">
+            1445689 PLAYS
+          </p> -->
+    <!-- </div>
+      </div>
+      <div class="card__body" id="card-body">
+        <p
+          class="p-6 text-justify overflow-hidden h-28 text-gradient"
+          id="band-description"
+        >
+          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ipsum
+          suscipit non excepturi totam veritatis accusamus voluptas beatae
+          repudiandae a, mollitia sint repellendus rem eum dicta soluta labore
+          commodi assumenda iure ratione omnis molestias quaerat? Itaque nam
+          molestias dignissimos sit natus culpa, dolore quod, officia doloremque
+          fugit laborum! Placeat, debitis libero. Lorem ipsum, dolor sit amet
+          consectetur adipisicing elit. Ipsum suscipit non excepturi totam
+          veritatis accusamus voluptas beatae repudiandae a, mollitia sint
+          repellendus rem eum dicta soluta labore commodi assumenda iure ratione
+          omnis molestias quaerat? Itaque nam molestias dignissimos sit natus
+          culpa, dolore quod, officia doloremque fugit laborum! Placeat, debitis
+          libero. Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+          Ipsum suscipit non excepturi totam veritatis accusamus voluptas beatae
+          repudiandae a, mollitia sint repellendus rem eum dicta soluta labore
+          commodi assumenda iure ratione omnis molestias quaerat? Itaque nam
+          molestias dignissimos sit natus culpa, dolore quod, officia doloremque
+          fugit laborum! Placeat, debitis libero. Lorem ipsum, dolor sit amet
+          consectetur adipisicing elit. Ipsum suscipit non excepturi totam
+          veritatis accusamus voluptas beatae repudiandae a, mollitia sint
+          repellendus rem eum dicta soluta labore commodi assumenda iure ratione
+          omnis molestias quaerat? Itaque nam molestias dignissimos sit natus
+          culpa, dolore quod, officia doloremque fugit laborum! Placeat, debitis
+          libero. Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+          Ipsum suscipit non excepturi totam veritatis accusamus voluptas beatae
+          repudiandae a, mollitia sint repellendus rem eum dicta soluta labore
+          commodi assumenda iure ratione omnis molestias quaerat? Itaque nam
+          molestias dignissimos sit natus culpa, dolore quod, officia doloremque
+          fugit laborum! Placeat, debitis libero.
+        </p>
+        <button
+          class="font-bold text-4xl text-center p-6 ml-auto mr-auto block"
+          id="read-more"
+        >
+          +
+        </button>
+      </div>
+    </div> -->
+
+    <!-- Card tentativa 2-->
+    <div class="card">
+      <!-- card header -->
+      <div class="card__header relative" id="card-header">
+        <img
+          class="h-[300px] w-[375px] object-cover"
+          src="/assets/imgs/rush_capa_1.jpeg"
+          alt="rush"
+        />
+        <div
+          class="complicated-container absolute -bottom-8 left37 flex flex-col justify-center items-center space-y-2"
+        >
+          <h2 class="text-white font-bold text-2xl">Rush</h2>
+          <img
+            class="h-[90px] w-[90px] object-cover rounded-full"
+            src="/assets/imgs/rush_capa_1.jpeg"
+            alt="rush"
+          />
+        </div>
+      </div>
+      <div
+        class="card__inbetween flex justify-center items-center space-x-40"
+        id="card-between"
+      >
+        <p class="translate-y-1/3 font-semibold text-gray-500 text-sm">ROCK</p>
+        <!-- <p class="text-white">99999999999999</p> -->
+        <p class="translate-y-1/3 font-semibold text-gray-500 text-sm">
+          945689 PLAYS
+        </p>
       </div>
       <div class="card__body" id="card-body">
         <p
@@ -125,14 +212,17 @@
     </div>
 
     <!-- Albuns -->
-    <div class="grid grid-cols-3">
-      <div class="w-32 h-32 bg-blue-800"></div>
-      <div class="w-32 h-32 bg-red-800"></div>
-      <div class="w-32 h-32 bg-yellow-800"></div>
-      <div class="w-32 h-32 bg-blue-800"></div>
-      <div class="w-32 h-32 bg-red-800"></div>
-      <div class="w-32 h-32 bg-yellow-800"></div>
-    </div>
+    <section id="albuns">
+      <h2 class="text-center pt-4 pb-8 font-bold text-2xl">Albuns</h2>
+      <div class="grid grid-cols-3" id="albuns-container">
+        <div class="w-32 h-32 bg-blue-800"></div>
+        <div class="w-32 h-32 bg-red-800"></div>
+        <div class="w-32 h-32 bg-yellow-800"></div>
+        <div class="w-32 h-32 bg-blue-800"></div>
+        <div class="w-32 h-32 bg-red-800"></div>
+        <div class="w-32 h-32 bg-yellow-800"></div>
+      </div>
+    </section>
 
     <script src="script.js"></script>
   </body>

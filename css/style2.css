@@ -1,7 +1,7 @@
 /* <!-- text gradient --> */
 
 .text-gradient {
-  background: -webkit-linear-gradient(#333, #fff);
+  background: -webkit-linear-gradient(#000, #fff);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
@@ -11,3 +11,42 @@
 .hide {
   display: none;
 }
+
+/* position absolute: custom property - left: 38% */
+
+.left37 {
+  left: 37%;
+}
+
+/* .complicada::before {
+  position: absolute;
+  left: 0;
+  top: 0;
+  content: "OLÁ";
+  font-size: 50px;
+  font-weight: bold;
+  color: #000;
+}
+
+.complicada:after {
+  position: absolute;
+  left: 0;
+  top: 0;
+  content: "opAKSdpoAKWPOSkd";
+  background-color: red;
+  width: 100px;
+  height: 100px;
+  font-size: 50px;
+  font-weight: bold;
+  color: #000;
+}
+
+.margin-direita {
+  margin-right: 0;
+  margin-top: 10px;
+}
+
+.margin-esquerda {
+  margin-left: -200px;
+  margin-top: 10px;
+} */
